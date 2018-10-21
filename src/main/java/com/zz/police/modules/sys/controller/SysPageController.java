@@ -56,7 +56,7 @@ public class SysPageController {
 	 */
 	@RequestMapping("/dashboard")
 	public String main() {
-		return "/system/dashboard.html";
+		return "/sys/dashboard.html";
 	}
 
 }
