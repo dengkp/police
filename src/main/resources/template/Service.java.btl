@@ -2,8 +2,8 @@ package ${package}.modules.${module}.service;
 
 import java.util.Map;
 
-import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import net.chenlin.dp.common.entity.Page;
+import net.chenlin.dp.common.entity.R;
 import ${package}.modules.${module}.entity.${className}Entity;
 
 /**
