@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import ${package}.modules.${module}.entity.${className}Entity;
 import ${package}.modules.${module}.dao.${className}Mapper;

@@ -2,7 +2,7 @@ package com.zz.police.modules.sys.controller;
 
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.SysLogEntity;
 import com.zz.police.modules.sys.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class SysLogController extends AbstractController {
 	 */
 	@SysLog("删除日志")
 	@RequestMapping("/remove")
-	public R batchRemove(@RequestBody Long[] id) {
+	public Result batchRemove(@RequestBody Long[] id) {
 		return sysLogService.batchRemove(id);
 	}
 	
@@ -50,7 +50,7 @@ public class SysLogController extends AbstractController {
 	 */
 	@SysLog("清空日志")
 	@RequestMapping("/clear")
-	public R batchRemoveAll() {
+	public Result batchRemoveAll() {
 		return sysLogService.batchRemoveAll();
 	}
 	

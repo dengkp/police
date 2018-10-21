@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.modules.sys.controller.AbstractController;
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import ${package}.modules.${module}.entity.${className}Entity;
 import ${package}.modules.${module}.service.${className}Service;
 

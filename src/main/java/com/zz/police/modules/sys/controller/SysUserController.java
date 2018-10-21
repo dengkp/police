@@ -3,7 +3,7 @@ package com.zz.police.modules.sys.controller;
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.entity.SysUserEntity;
 import com.zz.police.modules.sys.service.SysUserService;
@@ -42,8 +42,8 @@ public class SysUserController extends AbstractController {
 	 * 获取登录的用户信息
 	 */
 	@RequestMapping("/info")
-	public R info(){
-		return R.ok().put("user", getUser());
+	public Result info(){
+		return Result.ok().put("user", getUser());
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class SysUserController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/perms")
-	public R listUserPerms() {
+	public Result listUserPerms() {
 		return CommonUtils.msgNotCheckNull(sysUserService.listUserPerms(getUserId()));
 	}
 	
@@ -62,7 +62,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("新增用户")
 	@RequestMapping("/save")
-	public R save(@RequestBody SysUserEntity user) {
+	public Result save(@RequestBody SysUserEntity user) {
 		user.setUserIdCreate(getUserId());
 		return sysUserService.saveUser(user);
 	}
@@ -73,7 +73,7 @@ public class SysUserController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/infoUser")
-	public R getById(@RequestBody Long userId) {
+	public Result getById(@RequestBody Long userId) {
 		return sysUserService.getUserById(userId);
 	}
 	
@@ -84,7 +84,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("修改用户")
 	@RequestMapping("/update")
-	public R update(@RequestBody SysUserEntity user) {
+	public Result update(@RequestBody SysUserEntity user) {
 		return sysUserService.updateUser(user);
 	}
 	
@@ -95,7 +95,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("删除用户")
 	@RequestMapping("/remove")
-	public R batchRemove(@RequestBody Long[] id) {
+	public Result batchRemove(@RequestBody Long[] id) {
 		return sysUserService.batchRemove(id);
 	}
 	
@@ -107,7 +107,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("修改密码")
 	@RequestMapping("/updatePswd")
-	public R updatePswdByUser(String pswd, String newPswd) {
+	public Result updatePswdByUser(String pswd, String newPswd) {
 		SysUserEntity user = getUser();
 		user.setPassword(pswd);//原密码
 		user.setEmail(newPswd);//邮箱临时存储新密码
@@ -121,7 +121,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("启用账户")
 	@RequestMapping("/enable")
-	public R updateUserEnable(@RequestBody Long[] id) {
+	public Result updateUserEnable(@RequestBody Long[] id) {
 		return sysUserService.updateUserEnable(id);
 	}
 	
@@ -132,7 +132,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("禁用账户")
 	@RequestMapping("/disable")
-	public R updateUserDisable(@RequestBody Long[] id) {
+	public Result updateUserDisable(@RequestBody Long[] id) {
 		return sysUserService.updateUserDisable(id);
 	}
 	
@@ -143,7 +143,7 @@ public class SysUserController extends AbstractController {
 	 */
 	@SysLog("重置密码")
 	@RequestMapping("/reset")
-	public R updatePswd(@RequestBody SysUserEntity user) {
+	public Result updatePswd(@RequestBody SysUserEntity user) {
 		return sysUserService.updatePswd(user);
 	}
 }

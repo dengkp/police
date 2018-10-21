@@ -2,7 +2,7 @@ package com.zz.police.modules.sys.service.impl;
 
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.SysRoleMapper;
 import com.zz.police.modules.sys.dao.SysRoleMenuMapper;
@@ -54,7 +54,7 @@ public class SysRoleServiceImpl implements SysRoleService {
 	 * @return
 	 */
 	@Override
-	public R saveRole(SysRoleEntity role) {
+	public Result saveRole(SysRoleEntity role) {
 		int count = sysRoleMapper.save(role);
 		return CommonUtils.msg(count);
 	}
@@ -65,7 +65,7 @@ public class SysRoleServiceImpl implements SysRoleService {
 	 * @return
 	 */
 	@Override
-	public R getRoleById(Long id) {
+	public Result getRoleById(Long id) {
 		SysRoleEntity role = sysRoleMapper.getObjectById(id);
 		List<Long> menuId = sysRoleMenuMapper.listMenuId(id);
 		List<Long> orgId = sysRoleOrgMapper.listOrgId(id);
@@ -80,7 +80,7 @@ public class SysRoleServiceImpl implements SysRoleService {
 	 * @return
 	 */
 	@Override
-	public R updateRole(SysRoleEntity role) {
+	public Result updateRole(SysRoleEntity role) {
 		int count = sysRoleMapper.update(role);
 		return CommonUtils.msg(count);
 	}
@@ -91,7 +91,7 @@ public class SysRoleServiceImpl implements SysRoleService {
 	 * @return
 	 */
 	@Override
-	public R batchRemove(Long[] id) {
+	public Result batchRemove(Long[] id) {
 		int count = sysRoleMapper.batchRemove(id);
 		sysUserRoleMapper.batchRemoveByRoleId(id);
 		sysRoleMenuMapper.batchRemoveByRoleId(id);
@@ -114,7 +114,7 @@ public class SysRoleServiceImpl implements SysRoleService {
 	 * @return
 	 */
 	@Override
-	public R updateRoleOptAuthorization(SysRoleEntity role) {
+	public Result updateRoleOptAuthorization(SysRoleEntity role) {
 		Long roleId = role.getRoleId();
 		int count = sysRoleMenuMapper.remove(roleId);
 		Query query = new Query();
@@ -133,7 +133,7 @@ public class SysRoleServiceImpl implements SysRoleService {
 	 * @return
 	 */
 	@Override
-	public R updateRoleDataAuthorization(SysRoleEntity role) {
+	public Result updateRoleDataAuthorization(SysRoleEntity role) {
 		Long roleId = role.getRoleId();
 		int count = sysRoleOrgMapper.remove(roleId);
 		Query query = new Query();

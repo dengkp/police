@@ -1,6 +1,6 @@
 package com.zz.police.common.exception;
 
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.slf4j.Logger;
@@ -14,19 +14,19 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @author dengkp
  */
 @RestControllerAdvice
-public class RRExceptionHandler {
+public class ZzExceptionHandler {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
 	/**
 	 * 自定义异常
 	 */
-	@ExceptionHandler(RRException.class)
-	public R handleRRException(RRException e){
-		R r = new R();
-		r.put("code", e.getCode());
-		r.put("msg", e.getMessage());
-		return r;
+	@ExceptionHandler(ZzException.class)
+	public Result handleRRException(ZzException e){
+		Result result = new Result();
+		result.put("code", e.getCode());
+		result.put("msg", e.getMessage());
+		return result;
 	}
 
 	/**
@@ -35,9 +35,9 @@ public class RRExceptionHandler {
 	 * @return
 	 */
 	@ExceptionHandler(DuplicateKeyException.class)
-	public R handleDuplicateKeyException(DuplicateKeyException e){
+	public Result handleDuplicateKeyException(DuplicateKeyException e){
 		logger.error(e.getMessage(), e);
-		return R.error("数据库中已存在该记录");
+		return Result.error("数据库中已存在该记录");
 	}
 
 	/**
@@ -46,9 +46,9 @@ public class RRExceptionHandler {
 	 * @return
 	 */
 	@ExceptionHandler({UnauthorizedException.class, AuthorizationException.class})
-	public R handleAuthorizationException(AuthorizationException e){
+	public Result handleAuthorizationException(AuthorizationException e){
 		logger.error(e.getMessage(), e);
-		return R.error("没有权限，请联系管理员授权");
+		return Result.error("没有权限，请联系管理员授权");
 	}
 
 	/**
@@ -57,9 +57,9 @@ public class RRExceptionHandler {
 	 * @return
 	 */
 	@ExceptionHandler(Exception.class)
-	public R handleException(Exception e){
+	public Result handleException(Exception e){
 		logger.error(e.getMessage(), e);
-		return R.error();
+		return Result.error();
 	}
 	
 }

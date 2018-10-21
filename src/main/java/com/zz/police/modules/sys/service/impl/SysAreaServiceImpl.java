@@ -2,7 +2,7 @@ package com.zz.police.modules.sys.service.impl;
 
 import com.zz.police.common.constant.MsgConstant;
 import com.zz.police.common.entity.Query;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.SysAreaMapper;
 import com.zz.police.modules.sys.entity.SysAreaEntity;
@@ -45,7 +45,7 @@ public class SysAreaServiceImpl implements SysAreaService {
 	 * @return
 	 */
 	@Override
-	public R saveArea(SysAreaEntity area) {
+	public Result saveArea(SysAreaEntity area) {
 		int count = sysAreaMapper.save(area);
 		return CommonUtils.msg(count);
 	}
@@ -56,7 +56,7 @@ public class SysAreaServiceImpl implements SysAreaService {
 	 * @return
 	 */
 	@Override
-	public R getAreaById(Long areaId) {
+	public Result getAreaById(Long areaId) {
 		SysAreaEntity area = sysAreaMapper.getObjectById(areaId);
 		area.checkParentName();
 		return CommonUtils.msg(area);
@@ -68,7 +68,7 @@ public class SysAreaServiceImpl implements SysAreaService {
 	 * @return
 	 */
 	@Override
-	public R updateArea(SysAreaEntity area) {
+	public Result updateArea(SysAreaEntity area) {
 		int count = sysAreaMapper.update(area);
 		return CommonUtils.msg(count);
 	}
@@ -79,7 +79,7 @@ public class SysAreaServiceImpl implements SysAreaService {
 	 * @return
 	 */
 	@Override
-	public R batchRemoveArea(Long[] id) {
+	public Result batchRemoveArea(Long[] id) {
 		boolean children = false;
 		for(Long typeId : id) {
 			int count = sysAreaMapper.countAreaChildren(typeId);
@@ -88,7 +88,7 @@ public class SysAreaServiceImpl implements SysAreaService {
 			}
 		}
 		if(children) {
-			return R.error(MsgConstant.MSG_HAS_CHILD);
+			return Result.error(MsgConstant.MSG_HAS_CHILD);
 		}
 		int count = sysAreaMapper.batchRemove(id);
 		return CommonUtils.msg(id, count);
@@ -100,7 +100,7 @@ public class SysAreaServiceImpl implements SysAreaService {
 	 * @return
 	 */
 	@Override
-	public R listAreaByParentCode(Map<String, Object> params) {
+	public Result listAreaByParentCode(Map<String, Object> params) {
 		Query query = new Query(params);
 		List<SysAreaEntity> areas = sysAreaMapper.listAreaByParentCode(query);
 		return CommonUtils.msg(areas);

@@ -1,7 +1,7 @@
 package com.zz.police.modules.sys.controller;
 
 import com.zz.police.common.annotation.SysLog;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.SysAreaEntity;
 import com.zz.police.modules.sys.service.SysAreaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class SysAreaController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/list")
-	public R list(@RequestBody Map<String, Object> params) {
+	public Result list(@RequestBody Map<String, Object> params) {
 		return sysAreaService.listAreaByParentCode(params);
 	}
 	
@@ -50,7 +50,7 @@ public class SysAreaController extends AbstractController {
 	 */
 	@SysLog("新增区域")
 	@RequestMapping("/save")
-	public R save(@RequestBody SysAreaEntity area) {
+	public Result save(@RequestBody SysAreaEntity area) {
 		return sysAreaService.saveArea(area);
 	}
 	
@@ -60,7 +60,7 @@ public class SysAreaController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/info")
-	public R info(@RequestBody Long areaId) {
+	public Result info(@RequestBody Long areaId) {
 		return sysAreaService.getAreaById(areaId);
 	}
 	
@@ -71,7 +71,7 @@ public class SysAreaController extends AbstractController {
 	 */
 	@SysLog("修改区域")
 	@RequestMapping("/update")
-	public R update(@RequestBody SysAreaEntity area) {
+	public Result update(@RequestBody SysAreaEntity area) {
 		return sysAreaService.updateArea(area);
 	}
 	
@@ -82,7 +82,7 @@ public class SysAreaController extends AbstractController {
 	 */
 	@SysLog("删除区域")
 	@RequestMapping("/remove")
-	public R remove(@RequestBody Long[] id) {
+	public Result remove(@RequestBody Long[] id) {
 		return sysAreaService.batchRemoveArea(id);
 	}
 	

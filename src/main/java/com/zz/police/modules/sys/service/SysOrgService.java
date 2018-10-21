@@ -1,6 +1,6 @@
 package com.zz.police.modules.sys.service;
 
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.SysOrgEntity;
 
 import java.util.List;
@@ -28,28 +28,28 @@ public interface SysOrgService {
 	 * @param org
 	 * @return
 	 */
-	R saveOrg(SysOrgEntity org);
+	Result saveOrg(SysOrgEntity org);
 
 	/**
 	 * 根据id查询机构
 	 * @param orgId
 	 * @return
 	 */
-	R getOrg(Long orgId);
+	Result getOrg(Long orgId);
 
 	/**
 	 * 更新机构
 	 * @param org
 	 * @return
 	 */
-	R updateOrg(SysOrgEntity org);
+	Result updateOrg(SysOrgEntity org);
 
 	/**
 	 * 删除机构
 	 * @param id
 	 * @return
 	 */
-	R bactchRemoveOrg(Long[] id);
+	Result bactchRemoveOrg(Long[] id);
 
 	/**
 	 * 查询所有直接子机构集合

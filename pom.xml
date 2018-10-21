@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zz.police</groupId>
-    <artifactId>dp</artifactId>
+    <artifactId>zzpolice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <!-- 生成war时放开注释，以及第58行注释
@@ -12,7 +12,7 @@
     -->
 
     <name>zzpolice</name>
-    <description>dp-lte开发框架SpringBoot版本</description>
+    <description>zz-police开发框架SpringBoot版本</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

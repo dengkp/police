@@ -3,7 +3,7 @@ package com.zz.police.modules.sys.service.impl;
 import com.zz.police.common.constant.MsgConstant;
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.Query;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.SysMenuMapper;
 import com.zz.police.modules.sys.dao.SysRoleMenuMapper;
@@ -39,9 +39,9 @@ public class SysMenuServiceImpl implements SysMenuService {
 	 * @return
 	 */
 	@Override
-	public R listUserMenu(Long userId) {
+	public Result listUserMenu(Long userId) {
 		List<Long> menuIdList = sysUserMapper.listAllMenuId(userId);
-		return R.ok().put("menuList", getAllMenuList(menuIdList));
+		return Result.ok().put("menuList", getAllMenuList(menuIdList));
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class SysMenuServiceImpl implements SysMenuService {
 	 * @return
 	 */
 	@Override
-	public R listNotButton() {
+	public Result listNotButton() {
 		List<SysMenuEntity> menuList = sysMenuMapper.listNotButton();
 		SysMenuEntity root = new SysMenuEntity();
 		root.setMenuId(0L);
@@ -132,7 +132,7 @@ public class SysMenuServiceImpl implements SysMenuService {
 	 * @return
 	 */
 	@Override
-	public R saveMenu(SysMenuEntity menu) {
+	public Result saveMenu(SysMenuEntity menu) {
 		int count = sysMenuMapper.save(menu);
 		return CommonUtils.msg(count);
 	}
@@ -143,7 +143,7 @@ public class SysMenuServiceImpl implements SysMenuService {
 	 * @return
 	 */
 	@Override
-	public R getMenuById(Long id) {
+	public Result getMenuById(Long id) {
 		SysMenuEntity menu = sysMenuMapper.getObjectById(id);
 		return CommonUtils.msg(menu);
 	}
@@ -154,7 +154,7 @@ public class SysMenuServiceImpl implements SysMenuService {
 	 * @return
 	 */
 	@Override
-	public R updateMenu(SysMenuEntity menu) {
+	public Result updateMenu(SysMenuEntity menu) {
 		int count = sysMenuMapper.update(menu);
 		return CommonUtils.msg(count);
 	}
@@ -165,10 +165,10 @@ public class SysMenuServiceImpl implements SysMenuService {
 	 * @return
 	 */
 	@Override
-	public R batchRemove(Long[] id) {
+	public Result batchRemove(Long[] id) {
 		boolean children = this.hasChildren(id);
 		if(children) {
-			return R.error(MsgConstant.MSG_HAS_CHILD);
+			return Result.error(MsgConstant.MSG_HAS_CHILD);
 		}
 		int count = sysMenuMapper.batchRemove(id);
 		sysRoleMenuMapper.batchRemoveByMenuId(id);

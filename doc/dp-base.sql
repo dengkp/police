@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : mysql192.168.180.134
 Source Server Version : 50548
 Source Host           : 192.168.180.134:3306
-Source Database       : dp-lte
+Source Database       : zz-police
 
 Target Server Type    : MYSQL
 Target Server Version : 50548

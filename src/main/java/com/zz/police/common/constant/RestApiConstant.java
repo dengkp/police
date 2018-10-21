@@ -1,6 +1,6 @@
 package com.zz.police.common.constant;
 
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 
 /**
  * rest模块常量
@@ -60,8 +60,8 @@ public class RestApiConstant {
             this.msg = msg;
         }
 
-        public R getResp() {
-            return R.error(code, msg);
+        public Result getResp() {
+            return Result.error(code, msg);
         }
 
     }

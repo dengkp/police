@@ -1,6 +1,6 @@
 package com.zz.police.modules.sys.quartz;
 
-import com.zz.police.common.exception.RRException;
+import com.zz.police.common.exception.ZzException;
 import com.zz.police.common.utils.SpringContextUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.context.annotation.DependsOn;
@@ -42,7 +42,7 @@ public class ScheduleRunnable implements Runnable {
 				method.invoke(target);
 			}
 		}catch (Exception e) {
-			throw new RRException("执行定时任务失败", e);
+			throw new ZzException("执行定时任务失败", e);
 		}
 	}
 

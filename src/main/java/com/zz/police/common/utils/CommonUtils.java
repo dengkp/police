@@ -2,7 +2,7 @@ package com.zz.police.common.utils;
 
 import com.zz.police.common.constant.MsgConstant;
 import com.zz.police.common.constant.SystemConstant;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import org.apache.commons.io.output.FileWriterWithEncoding;
 import org.apache.commons.lang.StringUtils;
 import org.beetl.core.Configuration;
@@ -112,11 +112,11 @@ public class CommonUtils {
 	 * @param count
 	 * @return
 	 */
-	public static R msg(int count) {
+	public static Result msg(int count) {
 		if(isIntThanZero(count)){
-			return R.ok(MsgConstant.MSG_OPERATION_SUCCESS);
+			return Result.ok(MsgConstant.MSG_OPERATION_SUCCESS);
 		}
-		return R.error(MsgConstant.MSG_OPERATION_FAILED);
+		return Result.error(MsgConstant.MSG_OPERATION_FAILED);
 	}
 	
 	/**
@@ -124,11 +124,11 @@ public class CommonUtils {
 	 * @param data
 	 * @return
 	 */
-	public static R msg(Object data) {
+	public static Result msg(Object data) {
 		if(isNullOrEmpty(data)){
-			return R.error(MsgConstant.MSG_INIT_FORM);
+			return Result.error(MsgConstant.MSG_INIT_FORM);
 		}
-		return R.ok().put(SystemConstant.DATA_ROWS, data);
+		return Result.ok().put(SystemConstant.DATA_ROWS, data);
 	}
 	
 	/**
@@ -136,8 +136,8 @@ public class CommonUtils {
 	 * @param data
 	 * @return
 	 */
-	public static R msgNotCheckNull(Object data) {
-		return R.ok().put(SystemConstant.DATA_ROWS, data);
+	public static Result msgNotCheckNull(Object data) {
+		return Result.ok().put(SystemConstant.DATA_ROWS, data);
 	}
 	
 	/**
@@ -146,14 +146,14 @@ public class CommonUtils {
 	 * @param count
 	 * @return
 	 */
-	public static R msg(Object[] total, int count) {
+	public static Result msg(Object[] total, int count) {
 		if(total.length == count){
-			return R.ok(MsgConstant.MSG_OPERATION_SUCCESS);
+			return Result.ok(MsgConstant.MSG_OPERATION_SUCCESS);
 		}else{
 			if(isIntThanZero(count)){
-				return R.error(MsgConstant.removeFailed(total.length, count));
+				return Result.error(MsgConstant.removeFailed(total.length, count));
 			}else{
-				return R.error(MsgConstant.MSG_OPERATION_FAILED);
+				return Result.error(MsgConstant.MSG_OPERATION_FAILED);
 			}
 		}
 	}

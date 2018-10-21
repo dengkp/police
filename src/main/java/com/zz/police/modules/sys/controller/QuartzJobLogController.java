@@ -2,7 +2,7 @@ package com.zz.police.modules.sys.controller;
 
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.QuartzJobLogEntity;
 import com.zz.police.modules.sys.service.QuartzJobLogService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class QuartzJobLogController {
 	 */
 	@SysLog("删除定时任务日志")
 	@RequestMapping("/remove")
-	public R batchRemove(@RequestBody Long[] id) {
+	public Result batchRemove(@RequestBody Long[] id) {
 		return quartzJobLogService.batchRemove(id);
 	}
 	
@@ -50,7 +50,7 @@ public class QuartzJobLogController {
 	 */
 	@SysLog("清空定时任务日志")
 	@RequestMapping("/clear")
-	public R batchRemoveAll() {
+	public Result batchRemoveAll() {
 		return quartzJobLogService.batchRemoveAll();
 	}
 	

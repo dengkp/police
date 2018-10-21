@@ -3,7 +3,7 @@ package com.zz.police.modules.sys.controller;
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.SysRoleEntity;
 import com.zz.police.modules.sys.service.SysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +54,7 @@ public class SysRoleController extends AbstractController {
 	 */
 	@SysLog("新增角色")
 	@RequestMapping("/save")
-	public R saveRole(@RequestBody SysRoleEntity role) {
+	public Result saveRole(@RequestBody SysRoleEntity role) {
 		role.setUserIdCreate(getUserId());
 		return sysRoleService.saveRole(role);
 	}
@@ -65,7 +65,7 @@ public class SysRoleController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/info")
-	public R getRoleById(@RequestBody Long id) {
+	public Result getRoleById(@RequestBody Long id) {
 		return sysRoleService.getRoleById(id);
 	}
 	
@@ -76,7 +76,7 @@ public class SysRoleController extends AbstractController {
 	 */
 	@SysLog("修改角色")
 	@RequestMapping("/update")
-	public R updateRole(@RequestBody SysRoleEntity role) {
+	public Result updateRole(@RequestBody SysRoleEntity role) {
 		return sysRoleService.updateRole(role);
 	}
 	
@@ -87,7 +87,7 @@ public class SysRoleController extends AbstractController {
 	 */
 	@SysLog("删除角色")
 	@RequestMapping("/remove")
-	public R batchRemove(@RequestBody Long[] id) {
+	public Result batchRemove(@RequestBody Long[] id) {
 		return sysRoleService.batchRemove(id);
 	}
 	
@@ -98,7 +98,7 @@ public class SysRoleController extends AbstractController {
 	 */
 	@SysLog("操作权限")
 	@RequestMapping("/authorize/opt")
-	public R updateRoleOptAuthorization(@RequestBody SysRoleEntity role) {
+	public Result updateRoleOptAuthorization(@RequestBody SysRoleEntity role) {
 		return sysRoleService.updateRoleOptAuthorization(role);
 	}
 	
@@ -109,7 +109,7 @@ public class SysRoleController extends AbstractController {
 	 */
 	@SysLog("数据权限")
 	@RequestMapping("/authorize/data")
-	public R updateRoleDataAuthorization(@RequestBody SysRoleEntity role) {
+	public Result updateRoleDataAuthorization(@RequestBody SysRoleEntity role) {
 		return sysRoleService.updateRoleDataAuthorization(role);
 	}
 	

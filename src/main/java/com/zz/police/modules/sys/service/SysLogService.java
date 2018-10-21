@@ -1,7 +1,7 @@
 package com.zz.police.modules.sys.service;
 
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.SysLogEntity;
 
 import java.util.Map;
@@ -24,12 +24,12 @@ public interface SysLogService {
      * @param id
      * @return
      */
-    R batchRemove(Long[] id);
+    Result batchRemove(Long[] id);
 
     /**
      * 清空日志
      * @return
      */
-    R batchRemoveAll();
+    Result batchRemoveAll();
 
 }

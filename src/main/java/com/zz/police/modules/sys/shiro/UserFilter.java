@@ -1,6 +1,6 @@
 package com.zz.police.modules.sys.shiro;
 
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.JSONUtils;
 import com.zz.police.common.utils.WebUtils;
 import org.apache.shiro.SecurityUtils;
@@ -39,7 +39,7 @@ public class UserFilter extends AccessControlFilter {
         if (WebUtils.isAjax(httpServletRequest)) {
             httpServletResponse.setHeader("sessionstatus", "timeout");
 
-            R timeout = R.error(401, "登录超时，请重新登录");
+            Result timeout = Result.error(401, "登录超时，请重新登录");
             WebUtils.write(httpServletResponse, JSONUtils.beanToJson(timeout));
             return false;
         } else {

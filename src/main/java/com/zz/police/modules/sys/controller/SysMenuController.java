@@ -1,7 +1,7 @@
 package com.zz.police.modules.sys.controller;
 
 import com.zz.police.common.annotation.SysLog;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.SysMenuEntity;
 import com.zz.police.modules.sys.service.SysMenuService;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,7 +29,7 @@ public class SysMenuController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/user")
-	public R user(){
+	public Result user(){
 		return sysMenuService.listUserMenu(getUserId());
 	}
 	
@@ -48,7 +48,7 @@ public class SysMenuController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/select")
-	public R select() {
+	public Result select() {
 		return sysMenuService.listNotButton();
 	}
 	
@@ -59,7 +59,7 @@ public class SysMenuController extends AbstractController {
 	 */
 	@SysLog("新增菜单")
 	@RequestMapping("/save")
-	public R save(@RequestBody SysMenuEntity menu) {
+	public Result save(@RequestBody SysMenuEntity menu) {
 		return sysMenuService.saveMenu(menu);
 	}
 
@@ -69,7 +69,7 @@ public class SysMenuController extends AbstractController {
 	 * @return
 	 */
 	@RequestMapping("/info")
-	public R info(@RequestBody Long id) {
+	public Result info(@RequestBody Long id) {
 		return sysMenuService.getMenuById(id);
 	}
 	
@@ -80,7 +80,7 @@ public class SysMenuController extends AbstractController {
 	 */
 	@SysLog("修改菜单")
 	@RequestMapping("/update")
-	public R update(@RequestBody SysMenuEntity menu) {
+	public Result update(@RequestBody SysMenuEntity menu) {
 		return sysMenuService.updateMenu(menu);
 	}
 	
@@ -91,7 +91,7 @@ public class SysMenuController extends AbstractController {
 	 */
 	@SysLog("删除菜单")
 	@RequestMapping("/remove")
-	public R remove(@RequestBody Long[] id) {
+	public Result remove(@RequestBody Long[] id) {
 		return sysMenuService.batchRemove(id);
 	}
 	

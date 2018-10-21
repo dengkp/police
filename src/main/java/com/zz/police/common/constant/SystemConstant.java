@@ -20,8 +20,8 @@ public class SystemConstant {
 	 * 菜单类型
 	 *
 	 * @author dengkp
-	 * @email: yczclcn@163.com
-	 * @url: www.chenlintech.com
+	 *
+	 * @url:
 	 * @date 2018-10-21 下午1:36:27
 	 */
     public enum MenuType {
@@ -53,8 +53,8 @@ public class SystemConstant {
      * 定时任务状态
      *
      * @author dengkp
-     * @email: yczclcn@163.com
-     * @url: www.chenlintech.com
+     *
+     * @url:
      * @date 2018-10-21 下午1:36:17
      */
     public enum ScheduleStatus {

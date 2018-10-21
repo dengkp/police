@@ -2,7 +2,7 @@ package com.zz.police.modules.sys.controller;
 
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.entity.Page;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.modules.sys.entity.QuartzJobEntity;
 import com.zz.police.modules.sys.service.QuartzJobService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class QuartzJobController {
 	 */
 	@SysLog("新增定时任务")
 	@RequestMapping("/save")
-	public R save(@RequestBody QuartzJobEntity job) {
+	public Result save(@RequestBody QuartzJobEntity job) {
 		return quartzJobService.saveQuartzJob(job);
 	}
 	
@@ -50,7 +50,7 @@ public class QuartzJobController {
 	 * @return
 	 */
 	@RequestMapping("/info")
-	public R info(@RequestBody Long id) {
+	public Result info(@RequestBody Long id) {
 		return quartzJobService.getQuartzJobById(id);
 	}
 	
@@ -61,7 +61,7 @@ public class QuartzJobController {
 	 */
 	@SysLog("修改定时任务")
 	@RequestMapping("/update")
-	public R update(@RequestBody QuartzJobEntity job) {
+	public Result update(@RequestBody QuartzJobEntity job) {
 		return quartzJobService.updateQuartzJob(job);
 	}
 	
@@ -72,7 +72,7 @@ public class QuartzJobController {
 	 */
 	@SysLog("删除定时任务")
 	@RequestMapping("/remove")
-	public R remove(@RequestBody Long[] id) {
+	public Result remove(@RequestBody Long[] id) {
 		return quartzJobService.batchRemoveQuartzJob(id);
 	}
 	
@@ -83,7 +83,7 @@ public class QuartzJobController {
 	 */
 	@SysLog("立即运行定时任务")
 	@RequestMapping("/run")
-	public R run(@RequestBody Long[] id) {
+	public Result run(@RequestBody Long[] id) {
 		return quartzJobService.run(id);
 	}
 	
@@ -94,7 +94,7 @@ public class QuartzJobController {
 	 */
 	@SysLog("暂停定时运行")
 	@RequestMapping("/disable")
-	public R pause(@RequestBody Long[] id) {
+	public Result pause(@RequestBody Long[] id) {
 		return quartzJobService.pause(id);
 	}
 	
@@ -105,7 +105,7 @@ public class QuartzJobController {
 	 */
 	@SysLog("启用定时任务")
 	@RequestMapping("/enable")
-	public R resume(@RequestBody Long[] id) {
+	public Result resume(@RequestBody Long[] id) {
 		return quartzJobService.resume(id);
 	}
 	

@@ -3,7 +3,7 @@ package com.zz.police.modules.sys.service.impl;
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.QuartzJobMapper;
 import com.zz.police.modules.sys.entity.QuartzJobEntity;
@@ -65,7 +65,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R saveQuartzJob(QuartzJobEntity job) {
+	public Result saveQuartzJob(QuartzJobEntity job) {
 		job.setStatus(SystemConstant.ScheduleStatus.NORMAL.getValue());
 		int count = quartzJobMapper.save(job);
 		ScheduleUtils.createScheduleJob(job);
@@ -78,7 +78,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R getQuartzJobById(Long jobId) {
+	public Result getQuartzJobById(Long jobId) {
 		QuartzJobEntity job = quartzJobMapper.getObjectById(jobId);
 		return CommonUtils.msg(job);
 	}
@@ -89,7 +89,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R updateQuartzJob(QuartzJobEntity job) {
+	public Result updateQuartzJob(QuartzJobEntity job) {
 		int count = quartzJobMapper.update(job);
 		ScheduleUtils.updateScheduleJob(job);
 		return CommonUtils.msg(count);
@@ -101,7 +101,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R batchRemoveQuartzJob(Long[] id) {
+	public Result batchRemoveQuartzJob(Long[] id) {
 		for(Long jobId : id) {
 			ScheduleUtils.deleteScheduleJob(jobId);
 		}
@@ -115,7 +115,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R run(Long[] id) {
+	public Result run(Long[] id) {
 		for(Long jobId : id) {
 			ScheduleUtils.run(quartzJobMapper.getObjectById(jobId));
 		}
@@ -128,7 +128,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R pause(Long[] id) {
+	public Result pause(Long[] id) {
 		for(Long jobId : id) {
 			ScheduleUtils.pauseJob(jobId);
 		}
@@ -145,7 +145,7 @@ public class QuartzJobServiceImpl implements QuartzJobService {
 	 * @return
 	 */
 	@Override
-	public R resume(Long[] id) {
+	public Result resume(Long[] id) {
 		for(Long jobId : id) {
 			ScheduleUtils.resumeJob(jobId);
 		}

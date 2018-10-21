@@ -1,6 +1,6 @@
 package com.zz.police.common.utils;
 
-import com.zz.police.common.exception.RRException;
+import com.zz.police.common.exception.ZzException;
 
 import java.security.MessageDigest;
 import java.util.Date;
@@ -38,7 +38,7 @@ public class TokenUtils {
             byte[] messageDigest = algorithm.digest();
             return toHexString(messageDigest);
         } catch (Exception e) {
-            throw new RRException("生成Token失败", e);
+            throw new ZzException("生成Token失败", e);
         }
     }
 

@@ -1,7 +1,7 @@
 package com.zz.police.modules.sys.quartz;
 
 import com.zz.police.common.constant.SystemConstant.ScheduleStatus;
-import com.zz.police.common.exception.RRException;
+import com.zz.police.common.exception.ZzException;
 import com.zz.police.common.utils.JSONUtils;
 import com.zz.police.common.utils.SpringContextUtils;
 import com.zz.police.modules.sys.entity.QuartzJobEntity;
@@ -55,7 +55,7 @@ public class ScheduleUtils {
         try {
             return (CronTrigger) scheduler.getTrigger(getTriggerKey(jobId));
         } catch (SchedulerException e) {
-            throw new RRException("获取定时任务CronTrigger出现异常", e);
+            throw new ZzException("获取定时任务CronTrigger出现异常", e);
         }
     }
 
@@ -85,7 +85,7 @@ public class ScheduleUtils {
             	pauseJob(scheduleJob.getJobId());
             }
         } catch (SchedulerException e) {
-            throw new RRException("创建定时任务失败", e);
+            throw new ZzException("创建定时任务失败", e);
         }
     }
     
@@ -117,7 +117,7 @@ public class ScheduleUtils {
             }
             
         } catch (SchedulerException e) {
-            throw new RRException("更新定时任务失败", e);
+            throw new ZzException("更新定时任务失败", e);
         }
     }
 
@@ -133,7 +133,7 @@ public class ScheduleUtils {
         	
             scheduler.triggerJob(getJobKey(scheduleJob.getJobId()), dataMap);
         } catch (SchedulerException e) {
-            throw new RRException("立即执行定时任务失败", e);
+            throw new ZzException("立即执行定时任务失败", e);
         }
     }
 
@@ -145,7 +145,7 @@ public class ScheduleUtils {
         try {
             scheduler.pauseJob(getJobKey(jobId));
         } catch (SchedulerException e) {
-            throw new RRException("暂停定时任务失败", e);
+            throw new ZzException("暂停定时任务失败", e);
         }
     }
 
@@ -157,7 +157,7 @@ public class ScheduleUtils {
         try {
             scheduler.resumeJob(getJobKey(jobId));
         } catch (SchedulerException e) {
-            throw new RRException("恢复定时任务失败", e);
+            throw new ZzException("恢复定时任务失败", e);
         }
     }
 
@@ -169,7 +169,7 @@ public class ScheduleUtils {
         try {
             scheduler.deleteJob(getJobKey(jobId));
         } catch (SchedulerException e) {
-            throw new RRException("删除定时任务失败", e);
+            throw new ZzException("删除定时任务失败", e);
         }
     }
 }

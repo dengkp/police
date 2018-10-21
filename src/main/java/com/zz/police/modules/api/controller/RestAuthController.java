@@ -1,7 +1,7 @@
 package com.zz.police.modules.api.controller;
 
 import com.zz.police.common.constant.RestApiConstant;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.MD5Utils;
 import com.zz.police.common.utils.TokenUtils;
 import com.zz.police.modules.sys.controller.AbstractController;
@@ -37,8 +37,8 @@ public class RestAuthController extends AbstractController {
     @ApiOperation(value = "登录")
     @ApiImplicitParam(name = "token", value = "授权码")
     @RequestMapping(value = RestApiConstant.AUTH_REQUEST, method = RequestMethod.POST)
-    public R auth(@ApiParam(name = "username", value = "用户名") @RequestParam String username,
-                  @ApiParam(name = "password", value = "密码") @RequestParam String password) {
+    public Result auth(@ApiParam(name = "username", value = "用户名") @RequestParam String username,
+                       @ApiParam(name = "password", value = "密码") @RequestParam String password) {
         // 用户名为空
         if (StringUtils.isBlank(username.trim())) {
             return RestApiConstant.TokenErrorEnum.USER_USERNAME_NULL.getResp();
@@ -65,7 +65,7 @@ public class RestAuthController extends AbstractController {
         String token = TokenUtils.generateValue();
         int count = sysUserService.saveOrUpdateToken(sysUserEntity.getUserId(), token);
         if (count > 0) {
-            R success = RestApiConstant.TokenErrorEnum.TOKEN_ENABLE.getResp();
+            Result success = RestApiConstant.TokenErrorEnum.TOKEN_ENABLE.getResp();
             success.put(RestApiConstant.AUTH_TOKEN, token);
             return success;
         }
@@ -78,7 +78,7 @@ public class RestAuthController extends AbstractController {
      */
     @ApiOperation(value = "校验token是否可用")
     @RequestMapping(value = RestApiConstant.AUTH_CHECK, method = RequestMethod.POST)
-    public R authStatus(@ApiParam(name = "token", value = "授权码") @RequestParam String token) {
+    public Result authStatus(@ApiParam(name = "token", value = "授权码") @RequestParam String token) {
         // token为空
         if (StringUtils.isBlank(token.trim())) {
             return RestApiConstant.TokenErrorEnum.TOKEN_NOT_FOUND.getResp();

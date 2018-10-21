@@ -2,7 +2,7 @@ package com.zz.police.modules.sys.service.impl;
 
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
-import com.zz.police.common.entity.R;
+import com.zz.police.common.entity.Result;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.QuartzJobLogMapper;
 import com.zz.police.modules.sys.entity.QuartzJobLogEntity;
@@ -41,7 +41,7 @@ public class QuartzJobLogServiceImpl implements QuartzJobLogService {
 	 * @return
 	 */
 	@Override
-	public R batchRemove(Long[] id) {
+	public Result batchRemove(Long[] id) {
 		int count = quartzJobLogMapper.batchRemove(id);
 		return CommonUtils.msg(id, count);
 	}
@@ -51,7 +51,7 @@ public class QuartzJobLogServiceImpl implements QuartzJobLogService {
 	 * @return
 	 */
 	@Override
-	public R batchRemoveAll() {
+	public Result batchRemoveAll() {
 		int count = quartzJobLogMapper.batchRemoveAll();
 		return CommonUtils.msg(count);
 	}

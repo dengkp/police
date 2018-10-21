@@ -1,6 +1,6 @@
 package com.zz.police.modules.sys.generator;
 
-import com.zz.police.common.exception.RRException;
+import com.zz.police.common.exception.ZzException;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.common.utils.PropertiesUtils;
 import com.zz.police.modules.sys.entity.ColumnEntity;
@@ -120,7 +120,7 @@ public class GenUtils {
 				IOUtils.closeQuietly(sw);
 				zip.closeEntry();
 			} catch (IOException e) {
-				throw new RRException("渲染模板失败，表名：" + table.getTableName(), e);
+				throw new ZzException("渲染模板失败，表名：" + table.getTableName(), e);
 			}
 		}
 	}
