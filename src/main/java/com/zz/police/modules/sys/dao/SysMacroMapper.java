@@ -1,0 +1,37 @@
+package com.zz.police.modules.sys.dao;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.zz.police.modules.sys.entity.SysMacroEntity;
+
+import java.util.List;
+
+
+/**
+ * 通用字典
+ * @author dengkp
+ */
+@Mapper
+public interface SysMacroMapper extends BaseMapper<SysMacroEntity> {
+
+	/**
+	 * 查询目录集合
+	 * @return
+	 */
+	List<SysMacroEntity> listNotMacro();
+
+	/**
+	 * 查询子节点个数
+	 * @param typeId
+	 * @return
+	 */
+	int countMacroChildren(Long typeId);
+
+	/**
+	 * 根据类型查询所有参数
+	 * @param type
+	 * @return
+	 */
+	List<SysMacroEntity> listMacroValue(String type);
+	
+}

@@ -2,8 +2,8 @@ package ${package}.modules.${module}.manager;
 
 import java.util.List;
 
-import net.chenlin.dp.common.entity.Page;
-import net.chenlin.dp.common.entity.Query;
+import com.zz.police.common.entity.Page;
+import com.zz.police.common.entity.Query;
 import ${package}.modules.${module}.entity.${className}Entity;
 
 /**
