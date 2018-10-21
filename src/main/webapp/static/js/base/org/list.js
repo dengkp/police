@@ -57,7 +57,7 @@ function getGrid() {
 }
 
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	methods : {
 		load: function() {
             $('#dataGrid').bootstrapTable('refresh');

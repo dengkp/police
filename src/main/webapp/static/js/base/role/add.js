@@ -2,7 +2,7 @@
  * 新增-角色管理js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		role: {
 			orgId: 0,

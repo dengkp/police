@@ -1,8 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.constant.MsgConstant;
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.R;
@@ -10,6 +7,8 @@ import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.SysMacroMapper;
 import com.zz.police.modules.sys.entity.SysMacroEntity;
 import com.zz.police.modules.sys.service.SysMacroService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

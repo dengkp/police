@@ -5,7 +5,6 @@ import com.google.code.kaptcha.util.Config;
 import com.zz.police.common.support.interceptor.RestApiInterceptor;
 import com.zz.police.common.support.properties.GlobalProperties;
 import com.zz.police.common.xss.XssFilter;
-
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.server.ErrorPage;

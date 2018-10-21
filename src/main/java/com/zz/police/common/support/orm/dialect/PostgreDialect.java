@@ -3,10 +3,10 @@ package com.zz.police.common.support.orm.dialect;
 /**
  * Postgre 数据库 方言
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:07:36
+ * @author dengkp
+ *
+ *
+ * @date 2018-10-21 11:07:36
  */
 public class PostgreDialect extends Dialect {
 

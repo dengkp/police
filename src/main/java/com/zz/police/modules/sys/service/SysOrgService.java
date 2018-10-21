@@ -1,9 +1,9 @@
 package com.zz.police.modules.sys.service;
 
-import java.util.List;
-
 import com.zz.police.common.entity.R;
 import com.zz.police.modules.sys.entity.SysOrgEntity;
+
+import java.util.List;
 
 /**
  * 组织机构

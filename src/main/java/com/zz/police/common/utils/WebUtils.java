@@ -2,16 +2,15 @@ package com.zz.police.common.utils;
 
 import com.alibaba.druid.util.StringUtils;
 import com.zz.police.common.xss.XssHttpServletRequestWrapper;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * web工具类

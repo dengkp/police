@@ -1,5 +1,11 @@
 package com.zz.police.common.support.config;
 
+import com.zz.police.common.support.properties.GlobalProperties;
+import com.zz.police.common.support.shiro.listener.UserSessionListener;
+import com.zz.police.common.support.shiro.session.UserSessionDAO;
+import com.zz.police.common.support.shiro.session.UserSessionFactory;
+import com.zz.police.modules.sys.shiro.UserFilter;
+import com.zz.police.modules.sys.shiro.UserRealm;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.SessionListener;
 import org.apache.shiro.session.mgt.SessionManager;
@@ -13,15 +19,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
-import com.zz.police.common.support.properties.GlobalProperties;
-import com.zz.police.common.support.shiro.listener.UserSessionListener;
-import com.zz.police.common.support.shiro.session.UserSessionDAO;
-import com.zz.police.common.support.shiro.session.UserSessionFactory;
-import com.zz.police.modules.sys.shiro.UserFilter;
-import com.zz.police.modules.sys.shiro.UserRealm;
-
 import javax.servlet.Filter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * shiro配置

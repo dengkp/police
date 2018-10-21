@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 /**
  * MySql5PageHepler
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:07:21
+ * @author dengkp
+ *
+ *
+ * @date 2018-10-21 11:07:21
  */
 public class MySql5PageHepler {
     /**

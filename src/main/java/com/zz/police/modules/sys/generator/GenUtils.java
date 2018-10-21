@@ -1,20 +1,22 @@
 package com.zz.police.modules.sys.generator;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.WordUtils;
-
 import com.zz.police.common.exception.RRException;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.common.utils.PropertiesUtils;
 import com.zz.police.modules.sys.entity.ColumnEntity;
 import com.zz.police.modules.sys.entity.GeneratorParamEntity;
 import com.zz.police.modules.sys.entity.TableEntity;
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.WordUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 

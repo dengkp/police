@@ -8,9 +8,9 @@ import java.util.List;
 /**
  * 数据表属性
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
+ * @author dengkp
+ *
+ *
  * @date 2017年8月28日 下午8:12:53
  */
 public class TableEntity implements Serializable {

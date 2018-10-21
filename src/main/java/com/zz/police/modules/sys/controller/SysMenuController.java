@@ -1,19 +1,17 @@
 package com.zz.police.modules.sys.controller;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-
+import com.zz.police.common.annotation.SysLog;
+import com.zz.police.common.entity.R;
+import com.zz.police.modules.sys.entity.SysMenuEntity;
+import com.zz.police.modules.sys.service.SysMenuService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zz.police.common.annotation.SysLog;
-import com.zz.police.common.entity.R;
-import com.zz.police.modules.sys.entity.SysMenuEntity;
-import com.zz.police.modules.sys.service.SysMenuService;
+import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 系统菜单controller

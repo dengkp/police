@@ -3,10 +3,10 @@ package com.zz.police.common.support.orm.dialect;
 /**
  * MSSQL 数据库方言
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午110650
+ * @author dengkp
+ *
+ *
+ * @date 2018-10-21 110650
  */
 public class MSDialect extends Dialect {
 

@@ -1,15 +1,18 @@
 package com.zz.police.modules.sys.generator;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.common.utils.JdbcUtils;
 import com.zz.police.common.utils.PropertiesUtils;
 import com.zz.police.modules.sys.entity.ColumnEntity;
 import com.zz.police.modules.sys.entity.TableEntity;
+import org.apache.commons.lang.StringUtils;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 代码生成工具类（使用jdbc生成本地代码）

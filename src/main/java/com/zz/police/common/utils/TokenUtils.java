@@ -1,10 +1,10 @@
 package com.zz.police.common.utils;
 
+import com.zz.police.common.exception.RRException;
+
 import java.security.MessageDigest;
 import java.util.Date;
 import java.util.UUID;
-
-import com.zz.police.common.exception.RRException;
 
 /**
  * token工具类

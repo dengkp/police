@@ -1,17 +1,16 @@
 package com.zz.police.modules.sys.controller;
 
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.R;
 import com.zz.police.modules.sys.entity.QuartzJobEntity;
 import com.zz.police.modules.sys.service.QuartzJobService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 /**
  * 定时任务

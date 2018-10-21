@@ -6,10 +6,10 @@ import java.io.Serializable;
 /**
  * 用户与角色对应关系
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月10日 上午10:48:55
+ * @author dengkp
+ *
+ *
+ * @date 2017年8月10日 10:48:55
  */
 public class SysUserRoleEntity implements Serializable {
 	

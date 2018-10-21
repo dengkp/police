@@ -1,9 +1,8 @@
 package com.zz.police.modules.sys.controller;
 
+import com.zz.police.common.utils.UploadUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.zz.police.common.utils.UploadUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

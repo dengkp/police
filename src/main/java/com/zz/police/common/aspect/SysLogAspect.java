@@ -1,13 +1,5 @@
 package com.zz.police.common.aspect;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
-import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import com.zz.police.common.annotation.SysLog;
 import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.common.utils.JSONUtils;
@@ -16,6 +8,13 @@ import com.zz.police.common.utils.WebUtils;
 import com.zz.police.modules.sys.dao.SysLogMapper;
 import com.zz.police.modules.sys.entity.SysLogEntity;
 import com.zz.police.modules.sys.entity.SysUserEntity;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 

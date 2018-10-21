@@ -2,7 +2,7 @@
  * 生成代码-代码生成器js
  */
 var vm = new Vue({
-	el : '#dpLTE',
+	el : '#zzPolice',
 	data : {
 		generator : {
 			tables : null,

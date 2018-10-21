@@ -2,7 +2,7 @@
  * 新增-行政区域js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		area: {
 			parentCode: 0,

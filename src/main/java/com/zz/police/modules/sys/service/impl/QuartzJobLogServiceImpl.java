@@ -1,8 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
 import com.zz.police.common.entity.R;
@@ -10,6 +7,8 @@ import com.zz.police.common.utils.CommonUtils;
 import com.zz.police.modules.sys.dao.QuartzJobLogMapper;
 import com.zz.police.modules.sys.entity.QuartzJobLogEntity;
 import com.zz.police.modules.sys.service.QuartzJobLogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 

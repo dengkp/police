@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * 菜单
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
+ * @author dengkp
+ *
+ *
  * @date 2017年8月9日 下午11:15:17
  */
 public class SysMenuEntity implements Serializable {

@@ -1,8 +1,6 @@
 package com.zz.police.common.support.orm.plugins;
 
-import java.sql.Statement;
-import java.util.Properties;
-
+import com.zz.police.common.entity.Page;
 import org.apache.ibatis.executor.resultset.DefaultResultSetHandler;
 import org.apache.ibatis.executor.resultset.ResultSetHandler;
 import org.apache.ibatis.plugin.Interceptor;
@@ -19,7 +17,8 @@ import org.apache.ibatis.reflection.wrapper.DefaultObjectWrapperFactory;
 import org.apache.ibatis.reflection.wrapper.ObjectWrapperFactory;
 import org.apache.ibatis.session.RowBounds;
 
-import com.zz.police.common.entity.Page;
+import java.sql.Statement;
+import java.util.Properties;
 
 /**
  * PaginationResultSetHandlerInterceptor

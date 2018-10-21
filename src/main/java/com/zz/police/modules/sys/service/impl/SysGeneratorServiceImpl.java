@@ -1,9 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.apache.commons.io.IOUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
 import com.zz.police.modules.sys.dao.SysGeneratorMapper;
@@ -12,6 +8,9 @@ import com.zz.police.modules.sys.entity.GeneratorParamEntity;
 import com.zz.police.modules.sys.entity.TableEntity;
 import com.zz.police.modules.sys.generator.GenUtils;
 import com.zz.police.modules.sys.service.SysGeneratorService;
+import org.apache.commons.io.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;

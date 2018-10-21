@@ -1,10 +1,10 @@
 package com.zz.police.modules.sys.service;
 
-import java.util.List;
-import java.util.Map;
-
 import com.zz.police.common.entity.R;
 import com.zz.police.modules.sys.entity.SysMenuEntity;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * 系统菜单

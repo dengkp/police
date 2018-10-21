@@ -1,10 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.quartz.CronTrigger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
@@ -14,6 +9,10 @@ import com.zz.police.modules.sys.dao.QuartzJobMapper;
 import com.zz.police.modules.sys.entity.QuartzJobEntity;
 import com.zz.police.modules.sys.quartz.ScheduleUtils;
 import com.zz.police.modules.sys.service.QuartzJobService;
+import org.quartz.CronTrigger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.DependsOn;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;

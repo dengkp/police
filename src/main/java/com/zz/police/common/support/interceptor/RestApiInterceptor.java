@@ -1,11 +1,5 @@
 package com.zz.police.common.support.interceptor;
 
-import org.apache.commons.lang.StringUtils;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.web.method.HandlerMethod;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
-
 import com.zz.police.common.annotation.RestAnon;
 import com.zz.police.common.constant.RestApiConstant;
 import com.zz.police.common.utils.JSONUtils;
@@ -15,6 +9,11 @@ import com.zz.police.common.utils.WebUtils;
 import com.zz.police.modules.sys.entity.SysUserEntity;
 import com.zz.police.modules.sys.entity.SysUserTokenEntity;
 import com.zz.police.modules.sys.service.SysUserService;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.context.annotation.DependsOn;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

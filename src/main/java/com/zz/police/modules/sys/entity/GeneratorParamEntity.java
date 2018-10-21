@@ -3,10 +3,10 @@ package com.zz.police.modules.sys.entity;
 /**
  * 代码生成器请求参数
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月29日 上午11:29:00
+ * @author dengkp
+ *
+ *
+ * @date 2017年8月29日 11:29:00
  */
 public class GeneratorParamEntity {
 

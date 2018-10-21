@@ -1,17 +1,16 @@
 package com.zz.police.modules.sys.controller;
 
-import java.util.List;
-
+import com.zz.police.common.annotation.SysLog;
+import com.zz.police.common.entity.R;
+import com.zz.police.modules.sys.entity.SysMacroEntity;
+import com.zz.police.modules.sys.service.SysMacroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.zz.police.common.annotation.SysLog;
-import com.zz.police.common.entity.R;
-import com.zz.police.modules.sys.entity.SysMacroEntity;
-import com.zz.police.modules.sys.service.SysMacroService;
+import java.util.List;
 
 /**
  * 通用字典

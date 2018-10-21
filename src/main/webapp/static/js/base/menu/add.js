@@ -2,7 +2,7 @@
  * 新增-菜单管理js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		menu:{
 			parentName:null,

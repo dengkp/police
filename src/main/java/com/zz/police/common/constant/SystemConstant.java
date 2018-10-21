@@ -19,10 +19,10 @@ public class SystemConstant {
 	/**
 	 * 菜单类型
 	 *
-	 * @author ZhouChenglin
+	 * @author dengkp
 	 * @email: yczclcn@163.com
 	 * @url: www.chenlintech.com
-	 * @date 2017年8月8日 下午1:36:27
+	 * @date 2018-10-21 下午1:36:27
 	 */
     public enum MenuType {
         /**
@@ -52,10 +52,10 @@ public class SystemConstant {
     /**
      * 定时任务状态
      *
-     * @author ZhouChenglin
+     * @author dengkp
      * @email: yczclcn@163.com
      * @url: www.chenlintech.com
-     * @date 2017年8月8日 下午1:36:17
+     * @date 2018-10-21 下午1:36:17
      */
     public enum ScheduleStatus {
         /**
@@ -81,9 +81,9 @@ public class SystemConstant {
     /**
      * 通用字典
      *
-     * @author ZhouChenglin
-     * @email yczclcn@163.com
-     * @url www.chenlintech.com
+     * @author dengkp
+     *
+     *
      * @date 2017年8月15日 下午7:29:02
      */
     public enum MacroType {
@@ -113,9 +113,9 @@ public class SystemConstant {
     /**
      * 通用变量，表示可用、禁用、显示、隐藏
      *
-     * @author ZhouChenglin
-     * @email yczclcn@163.com
-     * @url www.chenlintech.com
+     * @author dengkp
+     *
+     *
      * @date 2017年8月15日 下午7:31:49
      */
     public enum StatusType {

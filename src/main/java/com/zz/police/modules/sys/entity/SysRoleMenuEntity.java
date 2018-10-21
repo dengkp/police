@@ -6,10 +6,10 @@ import java.io.Serializable;
 /**
  * 角色与菜单对应关系
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月10日 上午10:48:34
+ * @author dengkp
+ *
+ *
+ * @date 2017年8月10日 10:48:34
  */
 public class SysRoleMenuEntity implements Serializable {
 	

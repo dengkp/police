@@ -1,9 +1,10 @@
 package com.zz.police.modules.sys.quartz;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-
+import com.zz.police.common.utils.JSONUtils;
+import com.zz.police.common.utils.SpringContextUtils;
+import com.zz.police.modules.sys.dao.QuartzJobLogMapper;
+import com.zz.police.modules.sys.entity.QuartzJobEntity;
+import com.zz.police.modules.sys.entity.QuartzJobLogEntity;
 import org.apache.commons.lang.StringUtils;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -12,11 +13,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
-import com.zz.police.common.utils.JSONUtils;
-import com.zz.police.common.utils.SpringContextUtils;
-import com.zz.police.modules.sys.dao.QuartzJobLogMapper;
-import com.zz.police.modules.sys.entity.QuartzJobEntity;
-import com.zz.police.modules.sys.entity.QuartzJobLogEntity;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * 定时任务

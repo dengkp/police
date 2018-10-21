@@ -1,13 +1,12 @@
 package com.zz.police.modules.sys.quartz;
 
-import java.lang.reflect.Method;
-
+import com.zz.police.common.exception.RRException;
+import com.zz.police.common.utils.SpringContextUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.util.ReflectionUtils;
 
-import com.zz.police.common.exception.RRException;
-import com.zz.police.common.utils.SpringContextUtils;
+import java.lang.reflect.Method;
 
 /**
  * 执行定时任务

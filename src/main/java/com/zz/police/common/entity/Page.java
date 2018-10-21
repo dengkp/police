@@ -1,16 +1,18 @@
 package com.zz.police.common.entity;
 
+import org.apache.ibatis.session.RowBounds;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.ibatis.session.RowBounds;
 
 /**
  * Mybatis分页参数及查询结果封装. 注意所有序号从1开始
+ *
  * @author dengkp
  */
 public class Page<T> extends RowBounds {
-    
-	/**
+
+    /**
      * 页编号 : 第几页
      */
     protected int pageNo = 1;
@@ -70,7 +72,7 @@ public class Page<T> extends RowBounds {
         this.calcOffset();
         this.calcLimit();
     }
-    
+
     public Page(Query search) {
         this.pageNo = search.getAsInt("pageNumber");
         this.pageSize = search.getAsInt("pageSize");

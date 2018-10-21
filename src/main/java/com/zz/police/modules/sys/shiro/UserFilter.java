@@ -1,12 +1,11 @@
 package com.zz.police.modules.sys.shiro;
 
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.web.filter.AccessControlFilter;
-
 import com.zz.police.common.entity.R;
 import com.zz.police.common.utils.JSONUtils;
 import com.zz.police.common.utils.WebUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
+import org.apache.shiro.web.filter.AccessControlFilter;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;

@@ -1,5 +1,8 @@
 package com.zz.police.common.utils;
 
+import com.zz.police.common.constant.MsgConstant;
+import com.zz.police.common.constant.SystemConstant;
+import com.zz.police.common.entity.R;
 import org.apache.commons.io.output.FileWriterWithEncoding;
 import org.apache.commons.lang.StringUtils;
 import org.beetl.core.Configuration;
@@ -7,10 +10,6 @@ import org.beetl.core.GroupTemplate;
 import org.beetl.core.Template;
 import org.beetl.core.resource.ClasspathResourceLoader;
 import org.beetl.core.resource.FileResourceLoader;
-
-import com.zz.police.common.constant.MsgConstant;
-import com.zz.police.common.constant.SystemConstant;
-import com.zz.police.common.entity.R;
 
 import java.io.File;
 import java.io.IOException;

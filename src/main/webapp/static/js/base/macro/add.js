@@ -2,7 +2,7 @@
  * 新增-通用字典js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		macro:{
 			typeName: null,

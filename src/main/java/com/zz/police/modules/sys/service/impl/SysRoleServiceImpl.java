@@ -1,8 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
 import com.zz.police.common.entity.R;
@@ -13,6 +10,8 @@ import com.zz.police.modules.sys.dao.SysRoleOrgMapper;
 import com.zz.police.modules.sys.dao.SysUserRoleMapper;
 import com.zz.police.modules.sys.entity.SysRoleEntity;
 import com.zz.police.modules.sys.service.SysRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;

@@ -13,16 +13,16 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * @author dengkp
  */
 @SpringBootApplication
-public class DpApplication extends SpringBootServletInitializer {
+public class ZzPoliceApplication extends SpringBootServletInitializer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DpApplication.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ZzPoliceApplication.class);
 
     /**
      * jar启动
      * @param args
      */
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(DpApplication.class);
+        SpringApplication application = new SpringApplication(ZzPoliceApplication.class);
         application.setBannerMode(Banner.Mode.OFF);
         application.run(args);
         LOGGER.info("The Dp application has been started successfully!");
@@ -36,7 +36,7 @@ public class DpApplication extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         builder.bannerMode(Banner.Mode.OFF);
-        SpringApplicationBuilder applicationBuilder = builder.sources(DpApplication.class);
+        SpringApplicationBuilder applicationBuilder = builder.sources(ZzPoliceApplication.class);
         LOGGER.info("The Dp application has been started successfully!");
         return applicationBuilder;
     }

@@ -1,5 +1,10 @@
 package com.zz.police.modules.sys.quartz;
 
+import com.zz.police.common.constant.SystemConstant.ScheduleStatus;
+import com.zz.police.common.exception.RRException;
+import com.zz.police.common.utils.JSONUtils;
+import com.zz.police.common.utils.SpringContextUtils;
+import com.zz.police.modules.sys.entity.QuartzJobEntity;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.JobBuilder;
@@ -11,12 +16,6 @@ import org.quartz.SchedulerException;
 import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.springframework.context.annotation.DependsOn;
-
-import com.zz.police.common.constant.SystemConstant.ScheduleStatus;
-import com.zz.police.common.exception.RRException;
-import com.zz.police.common.utils.JSONUtils;
-import com.zz.police.common.utils.SpringContextUtils;
-import com.zz.police.modules.sys.entity.QuartzJobEntity;
 
 /**
  * 定时任务工具类

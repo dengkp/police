@@ -2,7 +2,7 @@
  * 编辑-定时任务js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		job: {
 			jobId: 0

@@ -6,10 +6,10 @@ import java.util.Date;
 /**
  * 系统用户Token
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年9月3日 上午3:27:06
+ * @author dengkp
+ *
+ *
+ * @date 2017年9月3日 3:27:06
  */
 public class SysUserTokenEntity implements Serializable {
 

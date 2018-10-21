@@ -1,5 +1,7 @@
 package com.zz.police.common.support.shiro.session;
 
+import com.zz.police.common.support.redis.RedisCacheManager;
+import com.zz.police.common.utils.SpringContextUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.UnknownSessionException;
@@ -9,9 +11,6 @@ import org.apache.shiro.subject.support.DefaultSubjectContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.DependsOn;
-
-import com.zz.police.common.support.redis.RedisCacheManager;
-import com.zz.police.common.utils.SpringContextUtils;
 
 import java.io.Serializable;
 

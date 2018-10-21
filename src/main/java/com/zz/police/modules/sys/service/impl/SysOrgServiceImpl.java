@@ -1,8 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.constant.MsgConstant;
 import com.zz.police.common.entity.R;
 import com.zz.police.common.utils.CommonUtils;
@@ -10,6 +7,8 @@ import com.zz.police.modules.sys.dao.SysOrgMapper;
 import com.zz.police.modules.sys.dao.SysRoleOrgMapper;
 import com.zz.police.modules.sys.entity.SysOrgEntity;
 import com.zz.police.modules.sys.service.SysOrgService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +16,10 @@ import java.util.List;
 /**
  * 组织机构
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月17日 上午11:33:28
+ * @author dengkp
+ *
+ *
+ * @date 2017年8月17日 11:33:28
  */
 @Service("sysOrgService")
 public class SysOrgServiceImpl implements SysOrgService {

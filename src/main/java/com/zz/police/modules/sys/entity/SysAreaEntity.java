@@ -1,17 +1,17 @@
 package com.zz.police.modules.sys.entity;
 
+import com.zz.police.common.utils.CommonUtils;
+
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 
-import com.zz.police.common.utils.CommonUtils;
-
 /**
  * 行政区域
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
+ * @author dengkp
+ *
+ *
  * @date 2017年8月18日 下午1:20:48
  */
 public class SysAreaEntity implements Serializable {

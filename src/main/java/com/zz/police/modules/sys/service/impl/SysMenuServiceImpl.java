@@ -1,8 +1,5 @@
 package com.zz.police.modules.sys.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.zz.police.common.constant.MsgConstant;
 import com.zz.police.common.constant.SystemConstant;
 import com.zz.police.common.entity.Query;
@@ -13,6 +10,8 @@ import com.zz.police.modules.sys.dao.SysRoleMenuMapper;
 import com.zz.police.modules.sys.dao.SysUserMapper;
 import com.zz.police.modules.sys.entity.SysMenuEntity;
 import com.zz.police.modules.sys.service.SysMenuService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;

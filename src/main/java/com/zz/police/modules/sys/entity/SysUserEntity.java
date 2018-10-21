@@ -7,10 +7,10 @@ import java.util.List;
 /**
  * 系统用户
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 下午2:42:32
+ * @author dengkp
+ *
+ *
+ * @date 2018-10-21 下午2:42:32
  */
 public class SysUserEntity implements Serializable {
 	

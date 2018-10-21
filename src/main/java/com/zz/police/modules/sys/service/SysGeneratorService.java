@@ -1,10 +1,10 @@
 package com.zz.police.modules.sys.service;
 
-import java.util.Map;
-
 import com.zz.police.common.entity.Page;
 import com.zz.police.modules.sys.entity.GeneratorParamEntity;
 import com.zz.police.modules.sys.entity.TableEntity;
+
+import java.util.Map;
 
 /**
  * 代码生成器

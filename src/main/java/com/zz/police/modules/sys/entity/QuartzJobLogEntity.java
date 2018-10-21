@@ -6,9 +6,9 @@ import java.sql.Timestamp;
 /**
  * 定时任务日志
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
+ * @author dengkp
+ *
+ *
  * @date 2017年8月20日 下午10:34:33
  */
 public class QuartzJobLogEntity implements Serializable {

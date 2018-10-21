@@ -32,7 +32,7 @@ $(window).on('resize', function() {
 Vue.component('menuItem', menuItem);
 
 var vm = new Vue({
-	el : '#dpLTE',
+	el : '#zzPolice',
 	data : {
 		user : {},
 		menuList : {},

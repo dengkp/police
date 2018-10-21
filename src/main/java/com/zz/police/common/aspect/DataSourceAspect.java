@@ -1,5 +1,8 @@
 package com.zz.police.common.aspect;
 
+import com.zz.police.common.annotation.DataSource;
+import com.zz.police.common.support.orm.db.DataSourceEnum;
+import com.zz.police.common.support.orm.db.DynamicDataSource;
 import org.apache.commons.lang.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,10 +12,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import com.zz.police.common.annotation.DataSource;
-import com.zz.police.common.support.orm.db.DataSourceEnum;
-import com.zz.police.common.support.orm.db.DynamicDataSource;
 
 import java.lang.reflect.Method;
 

@@ -3,10 +3,10 @@ package com.zz.police.common.support.orm.dialect;
 /**
  * oracle方言
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月8日 上午11:07:29
+ * @author dengkp
+ *
+ *
+ * @date 2018-10-21 11:07:29
  */
 public class OracleDialect extends Dialect {
 

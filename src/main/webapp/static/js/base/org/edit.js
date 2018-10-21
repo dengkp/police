@@ -2,7 +2,7 @@
  * 编辑-机构管理js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		org: {
 			parentId: 0,

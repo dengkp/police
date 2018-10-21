@@ -1,13 +1,12 @@
 package com.zz.police.common.utils;
 
+import com.zz.police.common.support.properties.GlobalProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-
-import com.zz.police.common.support.properties.GlobalProperties;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;

@@ -1,10 +1,9 @@
 package com.zz.police.modules.sys.dao;
 
-import java.util.List;
-
+import com.zz.police.modules.sys.entity.SysRoleEntity;
 import org.apache.ibatis.annotations.Mapper;
 
-import com.zz.police.modules.sys.entity.SysRoleEntity;
+import java.util.List;
 
 /**
  * 系统角色

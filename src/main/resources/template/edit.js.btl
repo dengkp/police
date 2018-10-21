@@ -2,7 +2,7 @@
  * 编辑-${comments}js
  */
 var vm = new Vue({
-	el:'#dpLTE',
+	el:'#zzPolice',
 	data: {
 		${objName}: {
 			${pk.fieldName}: 0

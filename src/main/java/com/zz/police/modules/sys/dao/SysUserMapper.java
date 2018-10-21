@@ -1,11 +1,10 @@
 package com.zz.police.modules.sys.dao;
 
-import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
-
 import com.zz.police.common.entity.Query;
 import com.zz.police.modules.sys.entity.SysUserEntity;
+import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * 系统用户dao

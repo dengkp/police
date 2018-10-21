@@ -1,8 +1,7 @@
 package com.zz.police.common.xss;
 
-import org.apache.commons.lang.StringUtils;
-
 import com.zz.police.common.exception.RRException;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * SQL过滤

@@ -1,11 +1,9 @@
 package com.zz.police.modules.sys.controller;
 
-import java.io.IOException;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.zz.police.common.entity.Page;
+import com.zz.police.modules.sys.entity.GeneratorParamEntity;
+import com.zz.police.modules.sys.entity.TableEntity;
+import com.zz.police.modules.sys.service.SysGeneratorService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.zz.police.common.entity.Page;
-import com.zz.police.modules.sys.entity.GeneratorParamEntity;
-import com.zz.police.modules.sys.entity.TableEntity;
-import com.zz.police.modules.sys.service.SysGeneratorService;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Map;
 
 /**
  * 代码生成器

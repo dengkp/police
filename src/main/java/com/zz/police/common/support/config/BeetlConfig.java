@@ -1,14 +1,13 @@
 package com.zz.police.common.support.config;
 
+import com.zz.police.common.support.properties.BeetlProperties;
+import com.zz.police.common.support.properties.GlobalProperties;
 import org.beetl.core.resource.ClasspathResourceLoader;
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
 import org.beetl.ext.spring.BeetlSpringViewResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.zz.police.common.support.properties.BeetlProperties;
-import com.zz.police.common.support.properties.GlobalProperties;
 
 /**
  * beetl配置

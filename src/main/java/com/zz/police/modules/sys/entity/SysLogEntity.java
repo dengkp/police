@@ -7,9 +7,9 @@ import java.sql.Timestamp;
 /**
  * 系统日志
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
+ * @author dengkp
+ *
+ *
  * @date 2017年8月14日 下午8:05:17
  */
 public class SysLogEntity implements Serializable {

@@ -5,9 +5,9 @@ import java.io.Serializable;
 /**
  * 数据表列属性
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
+ * @author dengkp
+ *
+ *
  * @date 2017年8月28日 下午8:04:40
  */
 public class ColumnEntity implements Serializable {

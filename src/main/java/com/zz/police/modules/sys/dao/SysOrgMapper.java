@@ -1,18 +1,17 @@
 package com.zz.police.modules.sys.dao;
 
-import org.apache.ibatis.annotations.Mapper;
-
 import com.zz.police.modules.sys.entity.SysOrgEntity;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 /**
  * 组织架构
  *
- * @author ZhouChenglin
- * @email yczclcn@163.com
- * @url www.chenlintech.com
- * @date 2017年8月17日 上午11:26:05
+ * @author dengkp
+ *
+ *
+ * @date 2017年8月17日 11:26:05
  */
 @Mapper
 public interface SysOrgMapper extends BaseMapper<SysOrgEntity> {

@@ -1,8 +1,7 @@
 package com.zz.police.modules.sys.dao;
 
-import org.apache.ibatis.annotations.Mapper;
-
 import com.zz.police.modules.sys.entity.QuartzJobLogEntity;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 定时任务日志

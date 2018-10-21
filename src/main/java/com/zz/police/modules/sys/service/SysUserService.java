@@ -1,13 +1,13 @@
 package com.zz.police.modules.sys.service;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.R;
 import com.zz.police.modules.sys.entity.SysUserEntity;
 import com.zz.police.modules.sys.entity.SysUserTokenEntity;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * 系统用户

@@ -1,11 +1,10 @@
 package com.zz.police.modules.sys.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.zz.police.common.utils.ShiroUtils;
 import com.zz.police.common.utils.WebUtils;
 import com.zz.police.modules.sys.entity.SysUserEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

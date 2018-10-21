@@ -1,10 +1,8 @@
 package com.zz.police.common.support.orm.plugins;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Properties;
-
+import com.zz.police.common.entity.Page;
+import com.zz.police.common.support.orm.dialect.Dialect;
+import com.zz.police.common.support.orm.dialect.DialectFactory;
 import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
@@ -25,9 +23,10 @@ import org.apache.ibatis.session.RowBounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.zz.police.common.entity.Page;
-import com.zz.police.common.support.orm.dialect.Dialect;
-import com.zz.police.common.support.orm.dialect.DialectFactory;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Properties;
 
 /**
  * PaginationStatementHandlerInterceptor

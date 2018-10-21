@@ -1,5 +1,6 @@
 package com.zz.police.common.exception;
 
+import com.zz.police.common.entity.R;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.slf4j.Logger;
@@ -7,8 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import com.zz.police.common.entity.R;
 
 /**
  * 异常处理器

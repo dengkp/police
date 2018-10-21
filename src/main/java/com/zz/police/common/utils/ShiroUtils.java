@@ -1,10 +1,9 @@
 package com.zz.police.common.utils;
 
+import com.zz.police.modules.sys.entity.SysUserEntity;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
-
-import com.zz.police.modules.sys.entity.SysUserEntity;
 
 /**
  * Shiro工具类

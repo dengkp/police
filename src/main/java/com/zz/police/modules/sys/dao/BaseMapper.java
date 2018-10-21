@@ -1,9 +1,9 @@
 package com.zz.police.modules.sys.dao;
 
-import java.util.List;
-
 import com.zz.police.common.entity.Page;
 import com.zz.police.common.entity.Query;
+
+import java.util.List;
 
 /**
  * 基础dao

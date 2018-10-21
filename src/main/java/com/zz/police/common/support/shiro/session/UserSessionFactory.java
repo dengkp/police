@@ -1,11 +1,10 @@
 package com.zz.police.common.support.shiro.session;
 
+import com.zz.police.common.utils.WebUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.SessionContext;
 import org.apache.shiro.session.mgt.SessionFactory;
 import org.apache.shiro.web.session.mgt.DefaultWebSessionContext;
-
-import com.zz.police.common.utils.WebUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
